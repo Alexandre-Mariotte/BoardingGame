@@ -1,4 +1,4 @@
-import SERVER_URL from '/assets/js/config.js';
+const server_url = 'https://boarding-games-server.vercel.app';
 
 async function signin(event) {
     event.preventDefault();
@@ -13,7 +13,7 @@ async function signin(event) {
     };
 
     try {
-        const response = await fetch(`${SERVER_URL}/api/auth/signup`, {
+        const response = await fetch(`${server_url}/api/auth/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

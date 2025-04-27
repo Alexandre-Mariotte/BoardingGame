@@ -1,4 +1,4 @@
-import SERVER_URL from '/assets/js/config.js';
+const server_url = 'https://boarding-games-server.vercel.app';
 
 async function login(event) {
     event.preventDefault();
@@ -6,7 +6,7 @@ async function login(event) {
     const username = document.getElementById("id_user").value.trim();
     const password = document.getElementById("user_password").value.trim();
 
-    const response = await fetch(`${SERVER_URL}/api/auth/login`, {
+    const response = await fetch(`${server_url}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

@@ -1,4 +1,4 @@
-import SERVER_URL from '/assets/js/config.js';
+const server_url = 'https://boarding-games-server.vercel.app';
 
 (async function checkUser() {
     const token = localStorage.getItem("token");
@@ -11,7 +11,7 @@ import SERVER_URL from '/assets/js/config.js';
     };
     if (!username) {
         try {
-            const response = await fetch(`${SERVER_URL}/api/auth/check`, {
+            const response = await fetch(`${server_url}/api/auth/check`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -56,7 +56,7 @@ async function delete_account() {
             window.location.href = "index.html";
         };
         try {
-            const response = await fetch(`${SERVER_URL}/api/users/${id_user}`, {
+            const response = await fetch(`${server_url}/api/users/${id_user}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
