@@ -1,4 +1,4 @@
-const server_url = 'https://boardinggame-production.up.railway.app/';
+const server_url = 'https://boardinggame-production.up.railway.app';
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('gameDetails', () => ({
