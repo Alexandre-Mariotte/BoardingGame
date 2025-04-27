@@ -1,3 +1,5 @@
+import SERVER_URL from './config.js';
+
 document.addEventListener('alpine:init', () => {
     Alpine.data('gameDetails', () => ({
         game: null,
@@ -14,7 +16,7 @@ document.addEventListener('alpine:init', () => {
             }
             
             try {
-                const response = await fetch(`${window.SERVER_URL}/api/games/${gameId}`);
+                const response = await fetch(`${SERVER_URL}/api/games/${gameId}`);
                 if (!response.ok) throw new Error('Jeu non trouvé');
                 
                 this.game = await response.json();

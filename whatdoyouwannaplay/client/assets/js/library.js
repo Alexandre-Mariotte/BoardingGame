@@ -1,3 +1,5 @@
+import SERVER_URL from './config.js';
+
 document.addEventListener("alpine:init", () => {
     // Créez un store global pour le cache avec localStorage
     Alpine.store('gameCache', {
@@ -166,7 +168,7 @@ document.addEventListener("alpine:init", () => {
         this.usingCache = false;
         
         try {
-          const response = await fetch(`${window.SERVER_URL}/api/games`);
+          const response = await fetch(`${SERVER_URL}/api/games`);
           if (!response.ok) throw new Error("Erreur lors de la récupération des jeux");
           
           const data = await response.json();
@@ -194,7 +196,7 @@ document.addEventListener("alpine:init", () => {
       // Récupère les catégories
       async fetchCategories() {
         try {
-          const response = await fetch(`${window.SERVER_URL}/api/categories`);
+          const response = await fetch(`${SERVER_URL}/api/categories`);
           if (!response.ok) throw new Error("Erreur de chargement des catégories");
           this.categories = await response.json();
         } catch (error) {
@@ -231,7 +233,7 @@ document.addEventListener("alpine:init", () => {
           if (this.maxYear) params.append("max_year", this.maxYear);
           if (this.minReviews) params.append("min_reviews", this.minReviews);
   
-          const url = `${window.SERVER_URL}/api/games/search?${params.toString()}`;
+          const url = `${SERVER_URL}/api/games/search?${params.toString()}`;
           console.log("Request URL:", url);
           const response = await fetch(url);
           

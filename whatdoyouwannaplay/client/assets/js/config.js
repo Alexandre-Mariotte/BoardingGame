@@ -1,6 +1,10 @@
+let SERVER_URL;
+
 const PORT = window.location.port || '3000';
 if (window.location.hostname === 'localhost') {
-  window.SERVER_URL = `http://localhost:${PORT}`;
+  SERVER_URL = `http://localhost:${PORT}`;
 } else {
-  window.SERVER_URL = 'https://boardinggame-production.up.railway.app';
+  SERVER_URL = 'https://boardinggame-production.up.railway.app';
 }
+
+export default SERVER_URL;
