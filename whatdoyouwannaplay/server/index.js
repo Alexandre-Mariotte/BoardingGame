@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.use(cors({
-    origin: 'boardinggame-production.up.railway.app', // URL de votre site client
+    origin: 'https://boardinggame-production.up.railway.app/', // URL de votre site client
     methods: ['GET', 'POST', 'PUT', 'DELETE'],       // Méthodes HTTP autorisées
     credentials: true                                // Autoriser les cookies et autres credentials
 }));
@@ -57,4 +57,4 @@ app.get('/', (req, res) => {
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Serveur Node en écoute sur ${PORT}\nAccès front: boardinggame-production.up.railway.app/index.html`));
+app.listen(PORT, () => console.log(`Serveur Node en écoute sur ${PORT}\nAccès front: https://boardinggame-production.up.railway.app//index.html`));

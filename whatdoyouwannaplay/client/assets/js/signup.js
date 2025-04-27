@@ -1,4 +1,4 @@
-const server_url = 'boardinggame-production.up.railway.app';
+const server_url = 'https://boardinggame-production.up.railway.app/';
 
 async function signin(event) {
     event.preventDefault();
