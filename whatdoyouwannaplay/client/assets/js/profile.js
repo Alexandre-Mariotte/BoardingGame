@@ -1,4 +1,4 @@
-const server_url = 'https://boardinggame-production.up.railway.app/';
+const server_url = 'https://boardinggame-production.up.railway.app';
 
 (async function checkUser() {
     const token = localStorage.getItem("token");

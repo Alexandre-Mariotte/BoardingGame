@@ -57,4 +57,4 @@ app.get('/', (req, res) => {
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Serveur Node en écoute sur ${PORT}\nAccès front: https://boardinggame-production.up.railway.app//index.html`));
+app.listen(PORT, () => console.log(`Serveur Node en écoute sur ${PORT}\nAccès front: https://boardinggame-production.up.railway.app/index.html`));
